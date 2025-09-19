@@ -1,0 +1,67 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar {
+  width: 280px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+
+.logo {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; /* 👈 place in the right corner */
+  background: #1e40af;
+  color: white;
+  border: none;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.notes-area {
+  position: relative;
+  flex: 1;
+  background-color: #dae5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome {
+  text-align: center;
+  max-width: 500px;
+}
+
+.welcome-img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.encrypt {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+}
