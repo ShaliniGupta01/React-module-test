@@ -3,13 +3,13 @@ import { addGroup, getGroups } from "../../utils/storage";
 import "./NewGroupPopup.css";
 
 const colors = [
-  "#b39ddb",
-  "#f48fb1",
-  "#4dd0e1",
-  "#ffab91",
-  "#1565c0",
-  "#64b5f6",
-];
+    "#d17bff",
+    "#f18fb0",
+    "#f16d6d",
+    "#58c9b9",
+    "#ffa559",
+    "#2f27ce",
+  ];
 
 function NewGroupPopup({ onClose }) {
   const [groupName, setGroupName] = useState("");
@@ -58,7 +58,7 @@ function NewGroupPopup({ onClose }) {
         </div>
 
         <div className="field">
-          <label className="label">Choose Color</label>
+          <label className="label">Choose colour</label>
           <div className="colors">
             {colors.map((c) => (
               <div
@@ -75,7 +75,7 @@ function NewGroupPopup({ onClose }) {
 
         <div className="actions">
           <button className="create-btn" onClick={handleCreate}>
-            create
+            Create
           </button>
         </div>
       </div>
@@ -84,5 +84,6 @@ function NewGroupPopup({ onClose }) {
 }
 
 export default NewGroupPopup;
+
 
 

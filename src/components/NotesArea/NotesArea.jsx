@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { addNote, getNotes } from "../../utils/storage";
-import "./NotesArea.css";
+import "./NotesArea.css"
 
 function NotesArea({ group }) {
   const [notes, setNotes] = useState([]);
   const [text, setText] = useState("");
 
+
   useEffect(() => {
-    setNotes(getNotes(group.id));
+    if (group) {
+      setNotes(getNotes(group.id));
+    }
   }, [group]);
 
+
   const handleAdd = () => {
-    if (!text.trim()) return;
+    if (!text.trim() || !group) return;
     addNote(group.id, text);
-    setText("");
+    setText('');
     setNotes(getNotes(group.id));
   };
 
@@ -22,49 +26,53 @@ function NotesArea({ group }) {
       e.preventDefault();
       handleAdd();
     }
-  };
+  }
 
   return (
-    <div className="notes-container">
+    <div className="notes">
       <div className="notes-header">
-        <div
-          className="header-avatar"
-          style={{ backgroundColor: group.color || "#4a90e2" }}
+        <div className="group-avatar"
+        style={{ background: group.color || "#0056b3" }}
         >
-          {group.name.charAt(0)}
+          {group.name
+            .split(" ")
+            .map((w) => w[0])
+            .join("")
+            .toUpperCase()
+            .slice(0, 2)}
         </div>
-        <h2>{group.name}</h2>
+        {group.name}
       </div>
 
+       {/* Scrollable Notes */}
       <div className="notes-list">
         {notes.map((n) => (
           <div key={n.id} className="note">
-            <p>{n.content}</p>
-            <small>
+            <p className="note-text">{n.content}</p>
+            <small  className="note-time">
               {new Date(n.updatedAt).toLocaleDateString()}{" "}
               {new Date(n.updatedAt).toLocaleTimeString()}
             </small>
           </div>
         ))}
       </div>
-
-      <div className="input-box">
+      
+      <div className="note-input">
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={handleKeyPress}
-          placeholder="Enter your note..."
+          placeholder="Enter your text here..."
         />
-        <button
-          className={text ? "send-btn active" : "send-btn"}
-          onClick={handleAdd}
-          disabled={!text.trim()}
-        >
+        <button className={text ? "sendActive" : "send"} onClick={handleAdd} disabled={!text.trim()}>
           ➤
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default NotesArea;
+
+
+
