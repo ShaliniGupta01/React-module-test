@@ -1,37 +1,46 @@
-/* Import Poppins from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 .groups-list {
   display: flex;
   flex-direction: column;
+  flex: 1;
   height: 100%;
-  overflow-y: scroll;
-  font-family: 'Roboto', sans-serif; 
-  padding: 0; 
-
+  overflow-y: auto;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-.notes-list::-webkit-scrollbar {
-  width: 10px;
+.groups-list::-webkit-scrollbar {
+  width: 6px;
 }
 
-.notes-list::-webkit-scrollbar-corner {
-  background-color: #f5f5f5;
+.groups-list::-webkit-scrollbar-corner {
+  background-color: #d8d3d3;
 }
 
-.notes-list::-webkit-scrollbar-thumb {
-  background: #ccc;
+.groups-list::-webkit-scrollbar-thumb {
+  background: white;
   border-radius: 20px;
+  min-height: 20px;
+  max-height: 40px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.notes-list::-webkit-scrollbar-track {
+.groups-list::-webkit-scrollbar-track {
   border-radius: 20px;
-  height: 20px;
-  background-color: #898989;
+  height: 10px;
+  background-color: rgb(218, 214, 214);
 }
 
-/* Each group item */
+.groups-list::after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: transparent;
+}
+
 .group-item {
   display: flex;
   align-items: center;
@@ -41,14 +50,13 @@
   cursor: pointer;
   transition: background 0.2s;
   font-size: 16px;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 .group-item:hover {
   background: #f5f5f5;
 }
 
-/* Avatar circle */
 .group-avatar {
   width: 40px;
   height: 40px;
@@ -57,7 +65,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-weight: 500;      
+  font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
 }
