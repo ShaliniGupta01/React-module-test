@@ -27,12 +27,12 @@ function Home() {
         ) : (
           <div className="welcome">
             <img src={homeImage} alt="Pocket Notes" className="welcome-img" />
-            <h1>Pocket Notes</h1>
+            <h1 className="name">Pocket Notes</h1>
             <p>
-              Send and receive messages without keeping your phone online. 
+              Send and receive messages without keeping your phone online.<br/> 
               Use Pocket Notes on up to 4 linked devices and 1 mobile phone.
             </p>
-            <small className="encrypt">🔒 end-to-end encrypted</small>
+            <small className="encrypt">🔒end-to-end encrypted</small>
           </div>
         )}
       </div>

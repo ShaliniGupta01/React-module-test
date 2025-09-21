@@ -1,9 +1,9 @@
- .notes {
+.notes {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .notes-header {
@@ -12,25 +12,24 @@
   align-items: center;
   padding: 15px 20px;
   color: #fff;
-  font-size: 20px;
-   white-space: nowrap;
+  font-size: 24px;
+  white-space: nowrap;
   overflow: hidden;
-  font-weight: 400;
+  font-weight: 420;
   gap: 10px;
-  background-color: #001F8B;
+  background-color: #001f8b;
   z-index: 5;
 }
 
-
 .group-avatar {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #0056b3;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 420;
   font-size: 18px;
   color: white;
   text-transform: uppercase;
@@ -39,7 +38,7 @@
 .notes-list {
   flex: 1;
   overflow-y: auto;
-  background: #DAE5F5;
+  background: #dae5f5;
   padding: 10px;
 }
 
@@ -54,7 +53,7 @@
 .notes-list::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 20px;
-    min-height: 20px;
+  min-height: 20px;
 }
 
 .notes-list::-webkit-scrollbar-track {
@@ -62,56 +61,69 @@
   background-color: #898989;
 }
 
-
 .note {
   background: white;
   padding: 16px;
-  border-radius: 6px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  letter-spacing: 5%;
+  line-height: 1.6;
+  border-radius: 5px;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 22px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
 
 .note-text {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
+
 .note-time {
-  align-self: flex-end;  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 12px;
   color: #353535;
+  gap: 10px; /* space between items */
 }
+
+.small-clock {
+  font-size: 5px;        /* very small like a point */
+  vertical-align: middle;
+  color:black;
+  background-color: black;
+  border-radius: 50%;
+}
+
 
 .note-input {
   flex-shrink: 0;
   display: flex;
   position: relative;
-  border: 8px solid #001F8B;
-  border-bottom-left-radius: 5px;
-  background: #FFFFFF;
+  border-bottom-left-radius: 6px;
+  border: 15px solid #001f8b;
+  background: #001f8b;
 }
 
 .note-input textarea {
   flex: 1;
   resize: none;
-  padding: 10px 40px 10px 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #ffffff;
   font-size: 18px;
-  height: 80px;
+  font-family: "Roboto", sans-serif;
+  height: 150px;
   outline: none;
-  
 }
 
 .note-input button {
   position: absolute;
   right: 12px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(100%);
   border: none;
   background: #007bff;
   color: white;

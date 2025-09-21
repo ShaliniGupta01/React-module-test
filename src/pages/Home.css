@@ -15,8 +15,9 @@
 }
 
 .logo {
-  font-size: 35px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 22px;
+  margin-top: 22px;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
@@ -48,10 +49,29 @@
   justify-content: center;
 }
 
-.welcome {
-  text-align: center;
-  max-width: 500px;
+.name{
+  font-size: 45px;
+  margin-bottom: 10px;
+  letter-spacing: 2%;
 }
+
+.welcome {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;      
+  height: 100%;             
+  padding: 20px;
+  
+}
+
+.welcome p{
+  font-weight: 420;
+  letter-spacing: 2%;
+  margin: 0;
+}
+
 
 .welcome-img {
   max-width: 100%;
@@ -66,3 +86,5 @@
   color: gray;
   text-align: center;
 }
+
+

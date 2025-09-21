@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { addNote, getNotes } from "../../utils/storage";
-import "./NotesArea.css"
+import "./NotesArea.css";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 function NotesArea({ group }) {
   const [notes, setNotes] = useState([]);
   const [text, setText] = useState("");
-
 
   useEffect(() => {
     if (group) {
@@ -13,11 +13,10 @@ function NotesArea({ group }) {
     }
   }, [group]);
 
-
   const handleAdd = () => {
     if (!text.trim() || !group) return;
     addNote(group.id, text);
-    setText('');
+    setText("");
     setNotes(getNotes(group.id));
   };
 
@@ -26,37 +25,62 @@ function NotesArea({ group }) {
       e.preventDefault();
       handleAdd();
     }
-  }
+  };
+
+  // Format date: "9 Mar 2023"
+  const formatDate = (dateStr) => {
+    const d = new Date(dateStr);
+    const day = d.getDate();
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const month = monthNames[d.getMonth()];
+    const year = d.getFullYear();
+    return `${day} ${month} ${year}`;
+  };
+
+  // Format time: "10:10 AM"
+  const formatTime = (dateStr) => {
+    const d = new Date(dateStr);
+    let hours = d.getHours();
+    const minutes = d.getMinutes().toString().padStart(2, "0");
+    const ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
+    return `${hours}:${minutes} ${ampm}`;
+  };
 
   return (
     <div className="notes">
+      {/* Notes Header */}
       <div className="notes-header">
-        <div className="group-avatar"
-        style={{ background: group.color || "#0056b3" }}
+        <div
+          className="group-avatar"
+          style={{ background: group?.color || "#0056b3" }}
         >
-          {group.name
-            .split(" ")
+          {group?.name
+            ?.split(" ")
             .map((w) => w[0])
             .join("")
             .toUpperCase()
             .slice(0, 2)}
         </div>
-        {group.name}
+        {group?.name}
       </div>
 
-       {/* Scrollable Notes */}
+      {/* Notes List */}
       <div className="notes-list">
         {notes.map((n) => (
           <div key={n.id} className="note">
             <p className="note-text">{n.content}</p>
-            <small  className="note-time">
-              {new Date(n.updatedAt).toLocaleDateString()}{" "}
-              {new Date(n.updatedAt).toLocaleTimeString()}
+            <small className="note-time">
+              {formatDate(n.updatedAt)}
+              <AiOutlineClockCircle className="small-clock" />
+              {formatTime(n.updatedAt)}
             </small>
           </div>
         ))}
       </div>
-      
+
+      {/* Note Input */}
       <div className="note-input">
         <textarea
           value={text}
@@ -64,15 +88,16 @@ function NotesArea({ group }) {
           onKeyDown={handleKeyPress}
           placeholder="Enter your text here..."
         />
-        <button className={text ? "sendActive" : "send"} onClick={handleAdd} disabled={!text.trim()}>
+        <button
+          className={text.trim() ? "sendActive" : "send"}
+          onClick={handleAdd}
+          disabled={!text.trim()}
+        >
           ➤
         </button>
       </div>
     </div>
   );
-};
+}
 
 export default NotesArea;
-
-
-

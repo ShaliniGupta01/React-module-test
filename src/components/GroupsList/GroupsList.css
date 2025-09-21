@@ -50,7 +50,7 @@
   cursor: pointer;
   transition: background 0.2s;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .group-item:hover {
@@ -77,3 +77,5 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+
