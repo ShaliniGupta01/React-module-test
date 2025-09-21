@@ -44,13 +44,13 @@
 .group-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 8px;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.2s;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .group-item:hover {
@@ -67,5 +67,13 @@
   color: #fff;
   font-weight: 500;
   font-size: 14px;
+  white-space: nowrap;
   text-transform: uppercase;
+}
+
+.group-name {
+  font-size: 20px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
 }

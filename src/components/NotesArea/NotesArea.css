@@ -12,8 +12,10 @@
   align-items: center;
   padding: 15px 20px;
   color: #fff;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+   white-space: nowrap;
+  overflow: hidden;
+  font-weight: 400;
   gap: 10px;
   background-color: #001F8B;
   z-index: 5;

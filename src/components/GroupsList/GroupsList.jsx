@@ -38,6 +38,3 @@ function GroupsList({ onSelectGroup }) {
 export default GroupsList;
 
 
-
-
-

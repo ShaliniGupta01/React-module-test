@@ -15,7 +15,7 @@
   background: #fff;
   padding: 20px 50px;
   border-radius: 5px;
-  width: 369px;
+  width: 450px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
@@ -30,12 +30,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .label {
   display: inline-block;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
   font-size: 16px;
   min-width: 90px;
   font-weight: 600;
@@ -44,7 +44,7 @@
 
 .input {
    flex: 1;
-  padding: 8px 10px;
+  padding: 10px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 14px;
@@ -64,8 +64,8 @@
 }
 
 .color-circle {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid transparent;
@@ -73,7 +73,7 @@
 }
 
 .color-circle.selected {
-  border: 2px solid #333;
+  border: 2px solid transparent;
 }
 
 .actions {
@@ -85,7 +85,7 @@
   background: #06257b;
   color: #fff;
   border: none;
-  padding: 6px 25px;
+  padding: 4px 22px ;
   font-size: 14px;
   border-radius: 6px;
   margin-left: 16px;
