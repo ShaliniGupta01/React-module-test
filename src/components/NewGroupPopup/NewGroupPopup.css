@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
   padding: 20px 50px;
   border-radius: 3px;
   width: 450px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .popup-title {
@@ -42,13 +42,13 @@
 }
 
 .input {
-   flex: 1;
+  flex: 1;
   padding: 10px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 14px;
   outline: none;
-} 
+}
 
 .input:focus {
   border-color: #1e40af;
@@ -59,7 +59,6 @@
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-
 }
 
 .color-circle {
@@ -78,16 +77,14 @@
 .actions {
   display: flex;
   justify-content: flex-end;
-  padding: 4px  0;
- 
-
+  padding: 4px 0;
 }
 
 .create-btn {
   background: #06257b;
   color: #fff;
   border: none;
-  padding: 2px 20px ;
+  padding: 2px 20px;
   font-size: 14px;
   border-radius: 6px;
   margin-left: 20px;
@@ -97,11 +94,9 @@
   transition: background 0.2s;
 }
 
-
 .create-btn:hover {
   background: #001a70;
 }
-
 
 /* ✅ Mobile view */
 @media screen and (max-width: 768px) {
@@ -132,7 +127,7 @@
     font-size: 14px;
     font-weight: 600;
     flex-shrink: 0;
-    min-width: 80px; 
+    min-width: 80px;
   }
 
   .input {
@@ -146,7 +141,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 
   .color-circle {
@@ -156,18 +151,17 @@
 
   .actions {
     width: 100%;
-    margin-top: 16px;
     display: flex;
     justify-content: center;
+    padding: 10px 0;
   }
 
   .create-btn {
-    width: 160%;
+    width: 70%;
     height: 30px;
     padding: 5px 0;
     margin: 10px;
     font-size: 14px;
     border-radius: 8px;
-
   }
 }
