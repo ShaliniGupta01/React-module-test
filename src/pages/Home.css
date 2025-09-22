@@ -88,3 +88,42 @@
 }
 
 
+/* ✅ Mobile view */
+@media screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* stack sidebar above notes area */
+    height: 100vh;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;  /* shrink to content instead of full height */
+    border: none;
+    border-bottom: 1px solid #ddd; /* small separator */
+  }
+
+  .logo {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .notes-area {
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 120px); /* fill remaining height */
+    overflow-y: auto;
+  }
+
+  .add-btn {
+    position: fixed;
+    bottom: 20px;   /* stick to bottom */
+    right: 20px;    /* stick to right */
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    z-index: 100;
+  }
+
+  
+}

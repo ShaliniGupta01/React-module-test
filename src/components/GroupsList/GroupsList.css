@@ -79,3 +79,26 @@
 }
 
 
+
+/* ✅ Mobile view */
+@media screen and (max-width: 768px) {
+  .groups-list {
+    height: calc(100vh - 60px);
+    padding: 10px 16px;
+  }
+
+  .group-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .group-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .group-name {
+    font-size: 16px;
+  }
+}

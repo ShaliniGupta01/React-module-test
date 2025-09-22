@@ -103,3 +103,71 @@
 }
 
 
+/* ✅ Mobile view */
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 90%;
+    max-width: 500px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .popup-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .label {
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 80px; 
+  }
+
+  .input {
+    flex: 1;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 20px;
+  }
+
+  .colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+  }
+
+  .color-circle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .actions {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .create-btn {
+    width: 160%;
+    height: 30px;
+    padding: 5px 0;
+    margin: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+
+  }
+}

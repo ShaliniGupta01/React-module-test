@@ -5,6 +5,14 @@
   width: 100%;
   overflow: hidden;
 }
+.back-btn {
+  display: none;
+  margin-right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 .notes-header {
   flex-shrink: 0;
@@ -134,6 +142,10 @@
   cursor: pointer;
 }
 
+.back-btn {
+  display: none; /* hidden by default */
+}
+
 .note-input button:disabled {
   background: #ccc;
   cursor: not-allowed;
@@ -141,4 +153,51 @@
 
 .sendActive {
   background: blue !important;
+}
+
+
+/* ✅ Mobile view */
+@media screen and (max-width: 768px) {
+  .notes-header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .group-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .note {
+    padding: 12px;
+    font-size: 14px;
+  
+  }
+
+
+  .note-input textarea {
+    font-size: 14px;
+    height: 80px;
+  }
+
+  .note-input button {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    top: 10px;
+  }
+
+  /* ✅ Back button visible on mobile */
+   .back-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+   
 }
