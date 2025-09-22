@@ -1,4 +1,4 @@
-.popup-overlay {
+ .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -101,12 +101,12 @@
   background: #001a70;
 }
 
-/* ✅ Mobile view */
 @media screen and (max-width: 768px) {
   .popup {
-    width: 160%;
-    max-width: 280px;
+    width: 100%; /* 160% ki jagah responsive rakho */
+   max-width: 280px;
     border-radius: 6px;
+    height: 35vh;
   }
 
   .popup-title {
@@ -119,7 +119,7 @@
     justify-content: space-between;
     gap: 12px;
     width: 100%;
-    margin-bottom: 8px;
+    margin-top: 10px;
   }
 
   .label {
@@ -146,15 +146,21 @@
   .actions {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
   }
 
   .create-btn {
-    width: 70%;
-    height: 30px;
-    padding: 5px 0;
-    margin: 10px;
-    font-size: 14px;
-    border-radius: 8px;
+    background: #06257b;
+    color: #fff;
+    border: none;
+    padding: 4px 70px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 2px;
+    transition: background 0.2s;
   }
-}
+}  
+
+
