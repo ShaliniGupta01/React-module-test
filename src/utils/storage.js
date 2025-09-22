@@ -13,7 +13,6 @@ function save(data) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
-
 export function getInitials(name) {
   return name
     .trim()
@@ -64,7 +63,3 @@ export function addNote(groupId, content) {
   });
   save(data);
 }
-
-
-
-

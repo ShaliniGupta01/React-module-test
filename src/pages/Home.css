@@ -116,9 +116,9 @@
     position: fixed;
     bottom: 20px; /* stick to bottom */
     right: 20px; /* stick to right */
-    width: 50px;
-    height: 50px;
-    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
     z-index: 100;
   }
 }

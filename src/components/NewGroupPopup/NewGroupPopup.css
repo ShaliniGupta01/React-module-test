@@ -8,21 +8,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .popup {
   background: #fff;
-  padding: 20px 50px;
+  padding: 20px;
   border-radius: 3px;
-  width: 450px;
+  width: 480px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .popup-title {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   font-size: 20px;
   font-weight: 600;
+  font-family: "Roboto", sans-serif;
 }
 
 .field {
@@ -34,19 +35,20 @@
 }
 
 .label {
-  display: inline-block;
-  flex-shrink: 0;
+  flex-shrink: 1;
   font-size: 16px;
-  min-width: 90px;
-  font-weight: 600;
+  min-width: 100px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .input {
   flex: 1;
-  padding: 10px 10px;
+  padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 14px;
+  font-family: "Roboto", sans-serif;
   outline: none;
 }
 
@@ -55,6 +57,7 @@
 }
 
 .colors {
+  margin-right: 80px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -77,14 +80,14 @@
 .actions {
   display: flex;
   justify-content: flex-end;
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
 .create-btn {
   background: #06257b;
   color: #fff;
   border: none;
-  padding: 2px 20px;
+  padding: 3px 24px;
   font-size: 14px;
   border-radius: 6px;
   margin-left: 20px;
@@ -101,17 +104,13 @@
 /* ✅ Mobile view */
 @media screen and (max-width: 768px) {
   .popup {
-    width: 90%;
-    max-width: 500px;
-    padding: 16px 18px;
-    border-radius: 12px;
-    text-align: left;
+    width: 160%;
+    max-width: 280px;
+    border-radius: 6px;
   }
 
   .popup-title {
     font-size: 18px;
-    margin-bottom: 14px;
-    font-weight: 600;
   }
 
   .field {
@@ -120,7 +119,7 @@
     justify-content: space-between;
     gap: 12px;
     width: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .label {
@@ -131,29 +130,23 @@
   }
 
   .input {
-    flex: 1;
-    font-size: 14px;
-    padding: 8px 12px;
-    border-radius: 20px;
+    font-size: 12px;
   }
 
   .colors {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    margin-right: 0px;
+    gap: 4px;
   }
 
   .color-circle {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
   }
 
   .actions {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
   }
 
   .create-btn {

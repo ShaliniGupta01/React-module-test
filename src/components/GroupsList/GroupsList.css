@@ -78,8 +78,6 @@
   overflow: hidden;
 }
 
-
-
 /* ✅ Mobile view */
 @media screen and (max-width: 768px) {
   .groups-list {
@@ -92,16 +90,8 @@
     gap: 14px;
   }
 
-  .group-avatar {
-    width: 32px;
-    height: 32px;
-    font-size: 12px;
-  }
-
   .group-name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
   }
-
-  
 }

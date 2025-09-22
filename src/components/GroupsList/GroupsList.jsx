@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getGroups , getInitials} from "../../utils/storage";
+import { getGroups, getInitials } from "../../utils/storage";
 import "./GroupsList.css";
 
 function GroupsList({ onSelectGroup }) {
@@ -28,12 +28,9 @@ function GroupsList({ onSelectGroup }) {
           {/* Group Name */}
           <span className="group-name">{g.name}</span>
         </div>
-       
       ))}
     </div>
   );
 }
 
 export default GroupsList;
-
-

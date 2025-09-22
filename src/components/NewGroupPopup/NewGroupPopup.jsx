@@ -3,13 +3,13 @@ import { addGroup, getGroups } from "../../utils/storage";
 import "./NewGroupPopup.css";
 
 const colors = [
-    "#d17bff",
-    "#f18fb0",
-    "#f16d6d",
-    "#58c9b9",
-    "#ffa559",
-    "#2f27ce",
-  ];
+  "#d17bff",
+  "#f18fb0",
+  "#f16d6d",
+  "#58c9b9",
+  "#ffa559",
+  "#2f27ce",
+];
 
 function NewGroupPopup({ onClose }) {
   const [groupName, setGroupName] = useState("");
@@ -32,7 +32,9 @@ function NewGroupPopup({ onClose }) {
       return;
     }
     const existing = getGroups();
-    if (existing.find((g) => g.name.toLowerCase() === groupName.toLowerCase())) {
+    if (
+      existing.find((g) => g.name.toLowerCase() === groupName.toLowerCase())
+    ) {
       alert("Group already exists!");
       return;
     }
@@ -84,6 +86,3 @@ function NewGroupPopup({ onClose }) {
 }
 
 export default NewGroupPopup;
-
-
-

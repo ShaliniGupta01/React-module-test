@@ -34,7 +34,10 @@ function Home() {
       {(selectedGroup || !isMobile) && (
         <div className="notes-area">
           {selectedGroup ? (
-            <NotesArea group={selectedGroup} onBack={() => setSelectedGroup(null)} />
+            <NotesArea
+              group={selectedGroup}
+              onBack={() => setSelectedGroup(null)}
+            />
           ) : (
             <div className="welcome">
               <img src={homeImage} alt="Pocket Notes" className="welcome-img" />

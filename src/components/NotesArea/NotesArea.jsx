@@ -31,8 +31,18 @@ function NotesArea({ group, onBack }) {
     const d = new Date(dateStr);
     const day = d.getDate();
     const monthNames = [
-      "Jan","Feb","Mar","Apr","May","Jun",
-      "Jul","Aug","Sep","Oct","Nov","Dec"
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     return `${day} ${monthNames[d.getMonth()]} ${d.getFullYear()}`;
   };
