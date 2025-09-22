@@ -189,8 +189,18 @@
     margin-right: 10px;
   }
 
-  .note-input {
-    border-radius: 0px;
+ .note-input {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 0;
+    border: 8px solid #001F8B;
+    background: #001F8B;
+    display: flex;
+    align-items: center;
+    padding: 6px;
   }
 
   .note-input textarea {
@@ -202,7 +212,7 @@
     width: 28px;
     height: 28px;
     font-size: 15px;
-    top: 40%;
+    top: 20%;
   }
 
   .note-text {
@@ -214,5 +224,7 @@
   .back-btn {
     display: inline-block;
     color: white;
+    font-size: 18px;
+    font-weight: 500;
   }
 }
