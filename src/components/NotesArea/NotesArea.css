@@ -151,6 +151,8 @@
 
 .back-btn {
   display: none; /* hidden by default */
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
 }
 
 .note-input button:disabled {
@@ -189,15 +191,15 @@
     margin-right: 10px;
   }
 
- .note-input {
+  .note-input {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     border: none;
     border-bottom-left-radius: 0;
-    border: 8px solid #001F8B;
-    background: #001F8B;
+    border: 8px solid #001f8b;
+    background: #001f8b;
     display: flex;
     align-items: center;
     padding: 6px;
@@ -209,10 +211,12 @@
   }
 
   .note-input button {
-    width: 28px;
-    height: 28px;
-    font-size: 15px;
-    top: 20%;
+    position: absolute;
+    transform: none;
+    margin-left: 8px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 
   .note-text {
@@ -224,7 +228,7 @@
   .back-btn {
     display: inline-block;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
   }
 }
