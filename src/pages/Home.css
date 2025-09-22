@@ -49,7 +49,7 @@
   justify-content: center;
 }
 
-.name{
+.name {
   font-size: 45px;
   margin-bottom: 10px;
   letter-spacing: 2%;
@@ -57,21 +57,19 @@
 
 .welcome {
   display: flex;
-  flex-direction: column;   
-  justify-content: center;  
-  align-items: center;      
-  text-align: center;      
-  height: 100%;             
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
   padding: 20px;
-  
 }
 
-.welcome p{
+.welcome p {
   font-weight: 420;
   letter-spacing: 2%;
   margin: 0;
 }
-
 
 .welcome-img {
   max-width: 100%;
@@ -87,7 +85,6 @@
   text-align: center;
 }
 
-
 /* ✅ Mobile view */
 @media screen and (max-width: 768px) {
   .home-container {
@@ -98,7 +95,7 @@
 
   .sidebar {
     width: 100%;
-    height: auto;  /* shrink to content instead of full height */
+    height: auto; /* shrink to content instead of full height */
     border: none;
     border-bottom: 1px solid #ddd; /* small separator */
   }
@@ -117,13 +114,11 @@
 
   .add-btn {
     position: fixed;
-    bottom: 20px;   /* stick to bottom */
-    right: 20px;    /* stick to right */
+    bottom: 20px; /* stick to bottom */
+    right: 20px; /* stick to right */
     width: 50px;
     height: 50px;
     font-size: 35px;
     z-index: 100;
   }
-
-  
 }

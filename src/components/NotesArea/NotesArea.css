@@ -87,7 +87,6 @@
   margin-bottom: 10px;
 }
 
-
 .note-time {
   display: flex;
   align-items: center;
@@ -98,13 +97,12 @@
 }
 
 .small-clock {
-  font-size: 5px;        /* very small like a point */
+  font-size: 5px; /* very small like a point */
   vertical-align: middle;
-  color:black;
+  color: black;
   background-color: black;
   border-radius: 50%;
 }
-
 
 .note-input {
   flex-shrink: 0;
@@ -155,7 +153,6 @@
   background: blue !important;
 }
 
-
 /* ✅ Mobile view */
 @media screen and (max-width: 768px) {
   .notes-header {
@@ -172,9 +169,7 @@
   .note {
     padding: 12px;
     font-size: 14px;
-  
   }
-
 
   .note-input textarea {
     font-size: 14px;
@@ -189,7 +184,7 @@
   }
 
   /* ✅ Back button visible on mobile */
-   .back-btn {
+  .back-btn {
     display: inline-block;
     background: none;
     border: none;
@@ -198,6 +193,4 @@
     cursor: pointer;
     margin-right: 10px;
   }
-
-   
 }

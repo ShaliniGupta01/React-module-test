@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getGroups } from "../../utils/storage";
-import { getInitials } from "../../utils/helpers";  // Import the helper function
+import { getGroups , getInitials} from "../../utils/storage";
 import "./GroupsList.css";
 
 function GroupsList({ onSelectGroup }) {
