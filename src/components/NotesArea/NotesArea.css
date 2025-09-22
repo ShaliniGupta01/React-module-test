@@ -30,8 +30,8 @@
 }
 
 .group-avatar {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #0056b3;
   display: flex;
@@ -187,7 +187,7 @@
     width: 28px;
     height: 28px;
     font-size: 15px;
-    top: 20px;
+    top: 40%;
   }
 
   /* ✅ Back button visible on mobile */
