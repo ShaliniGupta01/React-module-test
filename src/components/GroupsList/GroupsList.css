@@ -49,6 +49,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
@@ -67,12 +68,14 @@
   color: #fff;
   font-weight: 500;
   font-size: 14px;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   text-transform: uppercase;
 }
 
 .group-name {
   font-size: 20px;
+  font-family: "Roboto", sans-serif;
   color: #333;
   white-space: nowrap;
   overflow: hidden;
