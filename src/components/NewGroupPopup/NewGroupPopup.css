@@ -103,10 +103,11 @@
 
 @media screen and (max-width: 768px) {
   .popup {
-    width: 100%; /* 160% ki jagah responsive rakho */
-   max-width: 280px;
+    width: 90%;        /* screen ka 90% width */
+    max-width: 320px;  /* maximum width 320px tak */
     border-radius: 6px;
-    height: 35vh;
+    height: auto;      /* height content ke hisaab se adjust */
+    min-height: 40vh;  /* kam se kam 40% screen height */
   }
 
   .popup-title {
@@ -114,19 +115,15 @@
   }
 
   .field {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .label {
     font-size: 14px;
     font-weight: 600;
-    flex-shrink: 0;
-    min-width: 80px;
+    min-width: 70px;
   }
 
   .input {
@@ -134,33 +131,23 @@
   }
 
   .colors {
-    margin-right: 0px;
-    gap: 4px;
+    margin-right: 0;
+    gap: 6px;
   }
 
   .color-circle {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   .actions {
     width: 100%;
-    display: flex;
-    justify-content: center; 
+    justify-content: center;
   }
 
   .create-btn {
-    background: #06257b;
-    color: #fff;
-    border: none;
-    padding: 4px 70px;
+    padding: 6px 60px;
     font-size: 13px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 4px;
-    margin-left: 2px;
-    transition: background 0.2s;
+    margin-top: 6px;
   }
-}  
-
-
+}
